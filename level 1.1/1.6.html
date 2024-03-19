@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву.</span>
+</body>
+<script>
+    let word = "Аамамамамаь";
+    function last_word (word) {
+        if(word.charAt(word.length - 1) === "ь"){
+            return console.log(word.charAt(word.length - 2));
+        }
+        else if(word.charAt(word.length - 1) !== "ь"){
+            return console.log(word.charAt(word.length - 1));
+        }
+    }
+    last_word(word);
+
+
+    let words = "Аамамамамаь";
+
+function getLastOrPenultimateLetter(words) {
+    if (words.endsWith("ь")) {
+        return words[words.length - 2];
+    } else {
+        return words[words.length - 1];
+    }
+}
+
+console.log(getLastOrPenultimateLetter(words)); // Выведет "ь"
+</script>
+</html>

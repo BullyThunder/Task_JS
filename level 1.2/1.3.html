@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Дано число. Выведите в консоль сумму первой и последней цифры этого числа.</span>
+</body>
+<script>
+    let number = 4546546;
+    let num_str = number.toString();
+    let num_first = num_str.charAt(0);
+    let num_second = num_str.charAt(num_str.length-1);
+    let numm_first = Number(num_first);
+    let numm_second = Number(num_second);
+    let summ = (numm_first+numm_second);
+    console.log(summ);
+</script>
+</html>

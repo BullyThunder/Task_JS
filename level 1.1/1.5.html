@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Даны два слова. Проверьте, что первые буквы этих слов совпадают.</span>
+</body>
+<script>
+    let first_word = "Hello";
+    let second_word = "Horld";
+    function check_first (first_word, second_word) {
+        if (first_word.charAt(0) === second_word.charAt(0)){
+           return alert("The letters are the same")
+        }
+        else if(first_word.charAt(0) !== second_word.charAt(0)){
+           return alert("The letters aren`t the same")
+        }
+    }
+    check_first(first_word, second_word)
+</script>
+</html>
