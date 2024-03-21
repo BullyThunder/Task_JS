@@ -6,18 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <span>Дан массив с числами. 
+        Найдите сумму тех элементов этого массива, которые больше нуля и меньше десяти.</span>
 </body>
 <script>
-    let arr = [3,-2,7,10];
+    let arr = [3,-2,7,10,30,45];
+    let summ_arr = 0;
     function pos_num (arr) {
-        let summ_arr;
-      summ_arr = arr.map(element =>{
-        if(arr.element >0){
-            element++;
+        arr.map(element =>{
+        if(element >0 && element <10){
+            summ_arr+=element;
         }
         });
+        return summ_arr;
     }
-    pos_num(arr);
+   console.log(pos_num(arr));
 </script>
 </html>
