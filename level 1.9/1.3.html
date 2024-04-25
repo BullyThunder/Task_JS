@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Дан массив с числами. Увеличьте каждое число из массива на 10 процентов.</span>
+</body>
+<script>
+    let ar = [34,45,34,222,44];
+    let ar_10 = ar.map(item => (item/100) *10 + (item));
+    ar=ar_10;
+    console.log(ar);
+</script>
+</html>
