@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="block_form">
+    <form class="active_form" action="1.2.html">
+        <input id="name" class="input is-primary" name="Name" type="text" placeholder="Введите имя">
+        <div class="error_message"></div>
+        <input id="surname"   class="input is-primary" name="surname" type="text" placeholder="Введите фамилию">
+        <div class="error_message"></div>
+        <input id="tele"  class="input is-primary" name="Telephone" type="tel" placeholder="Введите телефон">
+        <div class="error_message"></div>
+        <input id="email"   class="input is-primary" name="E-mail" type="email" placeholder="Введите email">
+        <div class="error_message"></div>
+        <button id="but_sub" class="button is-success" type="submit">Отправить</button>
+    </form>
+</div>
+</body>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    .active_form{
+        display: flex;
+        justify-content: center;
+        
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .block_form{
+        display: flex;
+        justify-content: center;
+        
+        height: 100vh;
+    }
+    .error_message{
+        padding-bottom: 10px;
+        color: red;
+    }
+</style>
+<script>
+    let input = document.querySelectorAll("input");
+    function validation(input,index){
+        let submit = document.getElementById("but_sub");
+        submit.addEventListener("click", (event)=>{ 
+            input.forEach(element => {
+                let error_message = element.nextElementSibling;
+            if(element.value === ""){
+                event.preventDefault();
+                error_message.textContent = "У вас незаполненное поле";
+                }
+            else{
+                error_message.textContent = "";
+            }
+            });
+        }
+    )}
+
+    validation(input);
+</script>
+<style>
+</style>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+>
+</head>
+<body>
+    <div class="list">
+    <div class="list__block">
+        <input id="new_input"  class="input is-link" type="text" placeholder="Введите новый пункт">
+        <button id="add_smth" class="button is-success is-light"> Добавить</button>
+    </div>
+    <div class="list_dynamic_input">
+    </div>
+</div>
+</body>
+<script>
+    let input = document.getElementById("new_input");
+    let adds = document.getElementById("add_smth");
+    let bottom_div = document.getElementsByClassName("list_dynamic_input");
+    function add_list(){
+        adds.addEventListener("click", function(event){
+            if(input.value.length >= 1 ){
+                let bottom_div_new =document.createElement("div");
+                bottom_div_new.classList.add('bottom_div_new');
+                bottom_div[0].prepend(bottom_div_new);
+                let checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                let span = document.createElement("span");
+                span.textContent = `${input.value}`;
+                bottom_div_new.prepend(span);
+                bottom_div_new.prepend(checkbox);
+                input.value = "";
+            }
+        });
+        if(checkbox.checked){
+            span.style.textDecoration = "line-through";
+        }
+        }
+    add_list();
+</script>
+<style>
+    .list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin-top: 20px;
+    }
+    .list__block{
+        display: flex;
+        margin: 0 auto;
+        max-width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+    .list_dynamic_input{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 5px;
+    }
+    .bottom_div_new{
+        display: flex;
+        column-gap: 5px;
+    }
+</style>
+</html>
