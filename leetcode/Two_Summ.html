@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Дан массив целых чисел nums и целое число target, вернуть индексы двух чисел, 
+        чтобы их сумма давалаtarget .
+
+        Вы можете предположить, что каждый вход будет иметь ровно одно решение , 
+        и вы не можете использовать один и тот же элемент дважды.
+        
+        Вы можете возвращать ответ в любом порядке.</span>
+</body>
+<script>
+    let nums = [3,4,6];
+    let target = 9;
+    let twoSum = function(nums, target) {
+        for (let i = 0; i < nums.length; i++) {
+            for (let j = i+1; j < nums.length; j++) {
+                if(nums[i]+nums[j] === target){
+                    console.log(i,j)
+                    return [i,j];
+                }
+        }
+    }
+    };
+    twoSum(nums,target);
+</script>
+</html>

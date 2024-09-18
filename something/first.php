@@ -1,4 +1,5 @@
-
+<meta charset="utf-8">
 <?php
-		echo '<p style="display:flex; height:50wh;justify-content:center; color: blue; font-size: 20px;">Привет, мир!</p>';
-		?>
+	$intr = '12345';
+	echo $intr[0] + $intr[1] + $intr[2] + $intr[3] + $intr[4]
+?>
