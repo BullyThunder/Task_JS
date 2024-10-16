@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let strs = ["donner","donnbgbgf","donnrqed"];
+    let longestCommonPrefix = function(strs) {
+        let common_pref = strs[0];
+        let new_strs = strs.slice(1);
+        new_strs.forEach(element => {
+            while(!element.startsWith(common_pref)){
+                common_pref = common_pref.slice(0,common_pref.length - 1);
+                if(common_pref === ""){
+                    return "";
+                }
+            }
+        });
+        console.log(common_pref);
+        return common_pref;
+    }
+longestCommonPrefix(strs);
+</script>
+</html>
