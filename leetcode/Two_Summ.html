@@ -7,7 +7,7 @@
 </head>
 <body>
     <span>Дан массив целых чисел nums и целое число target, вернуть индексы двух чисел, 
-        чтобы их сумма давалаtarget .
+        чтобы их сумма давала target .
 
         Вы можете предположить, что каждый вход будет иметь ровно одно решение , 
         и вы не можете использовать один и тот же элемент дважды.
@@ -19,10 +19,12 @@
     let target = 9;
     let twoSum = function(nums, target) {
         for (let i = 0; i < nums.length; i++) {
+            let number_1 = nums[i];
             for (let j = i+1; j < nums.length; j++) {
-                if(nums[i]+nums[j] === target){
-                    console.log(i,j)
-                    return [i,j];
+                let number_2 = nums[j];
+                if( number_1 + number_2 === target){
+                    console.log(number_1,number_2)
+                    return [number_1,number_2];
                 }
         }
     }
