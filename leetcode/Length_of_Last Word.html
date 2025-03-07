@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+Дана строка s, состоящая из слов и пробелов, вернуть длину последнего слова в строке.
+
+Слово — это максимальная подстрока, состоящая только из символов, не являющихся пробелами.
+</body>
+<script>
+ let s = " hello world";
+ let lengthOfLastWord = function(s) {
+    let last = s.trimEnd().split(" ").pop();
+    return last.length;
+};
+let k = lengthOfLastWord(s);
+console.log(k);
+</script>
+</html>
+
+
+
+
+
+
+
+
+
