@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Напишите функцию, которая удаляет все дубликаты из отсортированного массива. 
+    Измените массив на месте, чтобы первые элементы содержали уникальные значения.
+</body>
+<script>
+    let arr = [1, 1,1, 2, 2, 3,3, 3, 4, 5, 5];
+    function remove_dublicates(arr){
+        let i=0;
+        while(i<arr.length){
+            if( arr[i] === arr[i-1]){
+                arr.splice(i,1);
+            }
+            else{
+                i--;
+            }
+        }
+        console.log(arr);
+        return arr;
+    }
+    remove_dublicates(arr);
+</script>
+</html>

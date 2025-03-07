@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let haystack = "bsadusatsa";
+    let needle = "sad";
+    let strStr = function(haystack,needle){
+        let occuren = haystack.indexOf(needle);
+        if(occuren <0){
+            return -1;
+        }
+        return occuren;
+    }
+    let k = strStr(haystack,needle);
+    console.log(k);
+</script>
+</html>

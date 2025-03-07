@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Дан отсортированный массив различных целых чисел и целевое значение, 
+        вернуть индекс, если цель найдена. Если нет, вернуть индекс, 
+        где бы он был, если бы он был вставлен по порядку.
+
+        Необходимо написать алгоритм со сложностью выполнения O(log n).</span>
+</body>
+<script>
+    let nums = [4,6,8];
+    let target = 6;
+    let index_element=0;
+    let searchInsert = function(nums, target,index_element) {
+    if(nums.indexOf(target)>=0){
+        index_element = nums.indexOf(target);
+        console.log(index_element);
+        return index_element;
+    }
+    else if(nums.indexOf(target)=== -1){
+        nums.push(target);
+        nums.sort((a,b)=> a-b);
+        index_element = nums.indexOf(target);
+        console.log(index_element);
+        return index_element;
+    }
+};
+let k = searchInsert(nums, target,index_element);
+</script>
+</html>

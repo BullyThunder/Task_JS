@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Дан массив чисел, вы должны изменить порядок элементов в массиве так, чтобы все четные числа
+     были в начале массива, а нечетные — в конце. 
+     Порядок внутри каждой группы (четных и нечетных чисел) сохраняется.
+</body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+    let arr_even = [];
+    let arr_odd = [];
+    function rearrangeArray(arr,arr_even,arr_odd){
+        for(let i =0;i<arr.length;i++){
+            if(arr[i] !== undefined && arr[i]%2 === 0){
+                arr_even.push(arr[i]);
+            }
+            else if(arr[i] !== undefined){
+                arr_odd.push(arr[i]);
+            }
+        }
+        arr.splice(0, arr.length);
+        arr.push(...arr_even);
+        arr.push(...arr_odd);
+        return arr;
+    }
+    console.log(rearrangeArray(arr,arr_even,arr_odd));
+</script>
+</html>
